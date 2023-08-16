@@ -49,19 +49,25 @@ Endpoint ready to use
 
 ```
 GET   /
-GET   /product
-GET   /comment
-GET   /{id}
-POST  /comment/post
-POST  /product/post
+GET   /api/v1
+GET   /api/v1/product
+GET   /api/v1/comment
+GET   /api/v1/{id}
+POST  /api/v1/comment/post
+POST  /api/v1/product/post
 ```
 
 ## API Request Response
 
 ### GET /
+  **Content:**  
+```
+{
+  "message": "API is running"
+}
+```
 
-
-### GET /
+### GET /api/v1
 
 ----
 Return all videos from databases.
@@ -88,7 +94,7 @@ Return all videos from databases.
 ```
 
 
-### GET /:id
+### GET /api/v1/:id
 
 ----
 Return videos associated with the specified id.
@@ -131,7 +137,7 @@ Return videos associated with the specified id.
 ```
 
 
-### GET /product
+### GET /api/v1/product
 
 ----
 Return all product from databases.
@@ -159,7 +165,7 @@ Return all product from databases.
 ```
 
 
-### GET /comment
+### GET /api/v1/comment
 
 ----
 Return all comment from databases.
@@ -185,7 +191,7 @@ Return all comment from databases.
 ```
 
 
-### POST /comment/post
+### POST /api/v1/comment/post
 
 ----
 Creates a new Comment and returns the new object.
@@ -213,7 +219,7 @@ Creates a new Comment and returns the new object.
   }
 }
 ```
-### POST /product/post
+### POST /api/v1/product/post
 
 ----
 Creates a new Product and returns the new object.
