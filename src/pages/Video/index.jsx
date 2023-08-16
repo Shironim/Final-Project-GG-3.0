@@ -18,7 +18,7 @@ const detailProduct = () => {
     })
   }
   useEffect(() => {
-    axios.get(`http://localhost:3000/${id}`)
+    axios.get(`https://mid-term-project-lyart.vercel.app/api/v1/${id}`)
       .then(res => {
         setProduct(res.data[0].products)
         setComment(res.data[0].comments)
@@ -40,7 +40,7 @@ const detailProduct = () => {
   const addComment = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/comment/post", {
+      await axios.post("https://mid-term-project-lyart.vercel.app/api/v1/comment/post", {
         username: newComment.username,
         comment: newComment.komentar,
         videoId: newComment.videoId

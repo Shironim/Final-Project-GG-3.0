@@ -11,7 +11,7 @@ const Home = () => {
   }, []);
 
   const getProducts = async () => {
-    const response = await axios.get('http://localhost:3000/');
+    const response = await axios.get('https://mid-term-project-lyart.vercel.app/api/v1');
     setVideo(response.data);
   }
   return (
